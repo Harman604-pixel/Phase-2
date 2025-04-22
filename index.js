@@ -1,17 +1,12 @@
-// src/components/common/Footer/index.js
-import styles from './styles.module.css';
+// src/components/Navbar/index.js
+import Link from 'next/link';
+import styles from './styles.module.css'; // Correct import
 
-export default function Footer() {
+export default function Navbar() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.container}>
-        <p>© {new Date().getFullYear()} Your Company Name. All rights reserved.</p>
-        <div className={styles.links}>
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
-          <a href="/contact">Contact Us</a>
-        </div>
-      </div>
-    </footer>
+    <nav className={styles.navbar}>
+      <Link href="/">Home</Link>
+      <Link href="/about">About</Link>
+    </nav>
   );
 }
