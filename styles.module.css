@@ -1,45 +1,49 @@
-/* src/components/common/Footer/styles.module.css */
-.footer {
-    background-color: #2c3e50;
-    color: white;
-    padding: 2rem 0;
-    margin-top: auto; /* Pushes footer to bottom */
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+/* components/common/Navbar/styles.module.css */
+.navbar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    padding: 1rem 2rem;
+    transition: all 0.3s;
   }
   
-  .links {
+  .navbar.light {
+    background: #f8f9fa;
+    color: #212529;
+  }
+  
+  .navbar.dark {
+    background: #212529;
+    color: #f8f9fa;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navLinks {
     display: flex;
     gap: 1.5rem;
   }
   
-  .links a {
-    color: #ecf0f1;
+  .navLinks a {
     text-decoration: none;
     transition: color 0.3s;
   }
   
-  .links a:hover {
-    color: #3498db;
+  .navbar.light .navLinks a {
+    color: #495057;
   }
   
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .links {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
+  .navbar.dark .navLinks a {
+    color: #e9ecef;
   }
   
+  .themeToggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
